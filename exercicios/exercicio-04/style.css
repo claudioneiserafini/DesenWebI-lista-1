@@ -1,0 +1,237 @@
+/* Normalize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e3f2fd;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  margin-top: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#video-container, #canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+video, canvas {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#photo-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#photo-actions button {
+  margin: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+#photo-list {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+#photo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  gap: 10px; 
+  flex-wrap: wrap; /* Permite que os botões quebrem de linha */
+}
+
+.actions button {
+  flex: 1 1 auto; /* Os botões se ajustam ao tamanho disponível */
+  padding: 10px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.actions button + button {
+  margin-left: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #video-container, #canvas-container {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  video, canvas {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #photo-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .actions button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  #photo-table, th, td {
+    font-size: 14px;
+    padding: 5px;
+  }
+}

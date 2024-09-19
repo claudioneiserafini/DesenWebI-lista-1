@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lista de Tarefas</title>
+    <meta name="description" content="Sistema de lista de tarefas, para realizacao da atividade 02 de desenvolvimento web" />
+    <meta name="author" content="Claudionei Lovato Serafini" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Lista de Tarefas</h1>
+      <button id="toggle-theme" aria-label="Alternar tema">Tema Escuro</button>
+    </header>
+
+    <main>
+      <section>
+        <input
+          type="text"
+          id="filter"
+          placeholder="Filtrar tarefas"
+          aria-label="Filtrar tarefas"
+        />
+        <form id="task-form">
+          <input
+            type="text"
+            id="new-task"
+            placeholder="Adicionar nova tarefa"
+            aria-label="Nova tarefa"
+            required
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <ul id="task-list" aria-live="polite"></ul>
+    </main>
+
+    <footer>
+      <p>© Claudionei Lovato Serafini 2024</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
