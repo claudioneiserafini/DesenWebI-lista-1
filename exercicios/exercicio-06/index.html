@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            <h1><a href="index.html" class="logo-link">DEV Store</a></h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="cart.html">Carrinho</a>
+            </nav>
+            <!-- Barra de busca -->
+            <div class="search-bar">
+                <select id="category-filter">
+                    <option value="all">Todas as Categorias</option>
+                    <option value="laptops">Notebooks</option>
+                    <option value="monitors">Monitores</option>
+                    <option value="keyboards">Teclados</option>
+                    <option value="mouse">Mouses</option>
+                    <option value="headset">Headsets</option>
+                    <option value="cadeira">Cadeiras</option>
+                </select>
+                <select id="brand-filter">
+                    <option value="all">Todas as Marcas</option>
+                    <option value="Dell">Dell</option>
+                    <option value="LG">LG</option>
+                    <option value="HyperX">HyperX</option>
+                    <option value="Redragon">Redragon</option>
+                    <option value="MAXRACER">MAXRACER</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Buscar por nome">
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="new-products">
+            <h2>Novos Produtos</h2>
+            <div id="products" class="product-list">
+                <!-- Produtos serão carregados aqui -->
+            </div>
+        </section>
+
+        <!-- Popup de confirmação de carrinho -->
+        <div id="cart-popup" class="cart-popup hidden">
+            <p>Produto adicionado ao carrinho!</p>
+            <div class="popup-buttons">
+                <button id="continue-shopping">Continuar Comprando</button>
+                <button id="go-to-cart">Ir para o Carrinho</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>DEV Store - Sua loja de tecnologia</p>
+            <p>Formas de pagamento: Visa, MasterCard, PayPal, Pix</p>
+            <p>Redes Sociais:
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">Twitter</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            <h1><a href="index.html" class="logo-link">DEV Store</a></h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="cart.html">Carrinho</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <h2>Finalizar Pedido</h2>
+
+            <!-- Total do pedido -->
+            <div class="order-summary">
+                <h3>Total do Pedido</h3>
+                <p id="order-total">R$ 0,00</p>
+            </div>
+
+            <!-- Opções de pagamento -->
+            <div class="payment-options">
+                <h3>Método de Pagamento</h3>
+                <label>
+                    <input type="radio" name="payment" value="cartao" checked>
+                    Cartão de Crédito
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="pix">
+                    Pix
+                </label>
+            </div>
+
+            <!-- Área de endereço -->
+            <div class="address-section">
+                <h3>Endereço de Entrega</h3>
+                <div class="address-display">
+                    <p id="saved-address">Nenhum endereço salvo</p>
+                    <button id="toggle-address-form"></button>
+                    <button id="remove-address" class="hidden">Remover Endereço</button>
+                </div>
+
+                <div id="address-form" class="hidden">
+                    <input type="text" id="address-input" placeholder="Digite seu endereço">
+                    <button id="save-address">Salvar Endereço</button>
+                </div>
+            </div>
+
+            <!-- Botão para finalizar pedido -->
+            <button id="confirm-order" class="confirm-button">Confirmar Pedido</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Formas de pagamento: Visa, MasterCard, Pix</p>
+        <p>Siga-nos nas redes sociais!</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
